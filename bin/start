@@ -1,0 +1,8 @@
+#! /usr/bin/env node
+
+var cp = require('child_process'),
+    path = require('path');
+
+cp.spawn(path.resolve(__dirname, '../redis-2.8.17/src/redis-server'), process.argv.slice(2), {
+    stdio: 'inherit'
+});
